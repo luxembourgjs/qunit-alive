@@ -44,14 +44,14 @@
                         
                         self.elt.animate({'left': destPos}, delay);
 
-                        $container.trigger('move.zombie', [zombie, srcPos, destPos]);
+                        self.elt.trigger('move.zombie', [srcPos, destPos]);
  
                         moving = false;
                     }, delay);
                    }
                }, 100);
 
-               $container.trigger('attack.zombie', [zombie]);
+               this.elt.trigger('attack.zombie');
             },
 
             // zombie's dead  
@@ -65,12 +65,20 @@
                     self.elt.remove(); 
                 });
 
-                $container.trigger('dead.zombie', [zombie]);
+                this.elt.trigger('dead.zombie');
+            },
+
+            on : function(eventName, cb){
+                var self = this;
+                var args = Array.prototype.slice.call(arguments, 1);
+                this.elt.on(eventName, function(){
+                    cb.apply(self, args);
+                });
             }
         };
 
         zombies++;
-        $container.trigger('created.zombie', [zombie]);
+        $container.trigger('created.zombie');
 
         return zombie;
     };
