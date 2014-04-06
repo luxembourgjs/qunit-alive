@@ -1,0 +1,48 @@
+/* Fonts */
+@import url(http://fonts.googleapis.com/css?family=Nosifer);
+
+
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
+
+
+body {
+    position: relative;
+    width: 100%;
+    background-color: #E1E1E1;
+}
+
+h1 {
+    clear: both;
+    font-family: Nosifer;
+    color: #C81717;
+    background: black;
+    margin: 0;
+    padding: 10px;
+    height: 80px;
+}
+
+section {
+    position: relative;
+    float: left;
+    height: 400px;
+    min-height: 400px;
+}
+
+.zombies{
+    width: 60%;
+}
+
+.hospital{
+    width: 35%;
+}
+.hospital img {
+    width: 100%;
+}
+
+.zombie{
+    position: absolute;
+}

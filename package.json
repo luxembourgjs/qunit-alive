@@ -1,0 +1,24 @@
+{
+  "name": "qunit-alive",
+  "description": "qunit overview samples",
+  "version": "0.1.0",
+  "homepage": "http://json.lu",
+  "author": {
+    "name": "Bertrand Chevrier",
+    "email": "chevrier.bertrand@gmail.com",
+    "url": "https://github.com/krampstudio/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luxembourgjs/qunit-alive"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.4",
+    "time-grunt": "^0.3.1",
+    "load-grunt-tasks": "^0.4.0",
+    "grunt-contrib-watch": "^0.6.0",
+    "grunt-contrib-connect": "^0.7.1",
+    "grunt-open": "^0.2.3",
+    "grunt-contrib-qunit": "^0.4.0"
+  }
+}
