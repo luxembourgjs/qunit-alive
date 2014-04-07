@@ -21,7 +21,7 @@ module.exports = function(grunt) {
                     base: '.',
                     livereload: true
                 }
-            }
+            } 
         },
         
         watch : {
@@ -38,10 +38,13 @@ module.exports = function(grunt) {
                 path : 'http://localhost:' + port,
                 app : 'firefox -p dev -no-remote'
             }
+        },
+
+        qunit : {
+            dist : ['test/**/*.html']
         }
     });
 
-
-    // Tasks flow.
     grunt.registerTask('dev', ['connect:dev', 'open:dev', 'watch:dev']);
+    grunt.registerTask('test', ['qunit']);
 };

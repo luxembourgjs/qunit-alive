@@ -29,7 +29,6 @@
             //start to attack the hospital
             attack : function(){
                var self = this; 
-                console.log('attack');               
                var moving = false;
                this._interval = setInterval(function loop(){        
                    var delay;
