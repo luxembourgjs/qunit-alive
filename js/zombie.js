@@ -18,8 +18,6 @@
         })
         .appendTo($container);
 
-
-
         // the new zombie
         var zombie = {
     
@@ -31,7 +29,7 @@
             //start to attack the hospital
             attack : function(){
                var self = this; 
-               
+                console.log('attack');               
                var moving = false;
                this._interval = setInterval(function loop(){        
                    var delay;
@@ -50,7 +48,6 @@
                     }, delay);
                    }
                }, 100);
-
                this.elt.trigger('attack.zombie');
             },
 
@@ -62,7 +59,7 @@
                 }
             
                 this.elt.animate({'opacity': 0}, 600, function(){
-                    self.elt.remove(); 
+                    self.elt.hide(); 
                 });
 
                 this.elt.trigger('dead.zombie');
@@ -70,8 +67,8 @@
 
             on : function(eventName, cb){
                 var self = this;
-                var args = Array.prototype.slice.call(arguments, 1);
                 this.elt.on(eventName, function(){
+                    var args = Array.prototype.slice.call(arguments, 1);
                     cb.apply(self, args);
                 });
             }
